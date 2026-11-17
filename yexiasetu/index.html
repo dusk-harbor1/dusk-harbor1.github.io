@@ -1,0 +1,1459 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>腋下涩图-二次元插画交流与收藏指南</title>
+  <meta name="description" content="腋下涩图是聚焦二次元插画中腋下视角创作的交流园地。收录精选画师作品、解析构图与光影技法、整理收藏渠道与社区动态，帮助爱好者发现高质量插画。">
+  <meta name="keywords" content="腋下涩图">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='44' fill='%23f4e6d6'/%3E%3Cpath d='M30 60 Q50 30 70 60' stroke='%23c98f5b' stroke-width='8' fill='none' stroke-linecap='round'/%3E%3Ccircle cx='50' cy='42' r='6' fill='%23c98f5b'/%3E%3C/svg%3E">
+  <style>
+    :root {
+      --brand: #c98f5b;
+      --brand-soft: #f4e6d6;
+      --brand-deep: #8f5f36;
+      --ink: #2d241c;
+      --ink-mid: #5c4f43;
+      --ink-light: #8c7d6e;
+      --paper: #fdfaf6;
+      --card: #ffffff;
+      --line: #e8ddd0;
+      --line-soft: #f0e8df;
+      --accent: #a06a3b;
+      --success: #4d7a5c;
+      --danger: #b3564c;
+      --radius-sm: 8px;
+      --radius: 14px;
+      --radius-lg: 22px;
+      --shadow: 0 6px 18px rgba(45, 36, 28, 0.06);
+      --shadow-hover: 0 10px 24px rgba(45, 36, 28, 0.09);
+      --sticky-offset: 112px;
+      --font: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans SC", system-ui, sans-serif;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: var(--font);
+      background: var(--paper);
+      color: var(--ink);
+      line-height: 1.75;
+      font-size: 16px;
+      -webkit-font-smoothing: antialiased;
+    }
+    img { max-width: 100%; display: block; }
+    a { color: var(--brand-deep); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    ul, ol { list-style: none; }
+    button { font-family: inherit; cursor: pointer; }
+    .wrap {
+      width: min(1200px, calc(100% - 32px));
+      margin: 0 auto;
+    }
+    /* ---------- 吸顶区 ---------- */
+    .sticky-stack {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .announce {
+      background: var(--brand-deep);
+      color: #fcf6ee;
+      font-size: 0.85rem;
+      padding: 6px 0;
+      letter-spacing: 0.01em;
+    }
+    .announce .wrap {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    .announce-tag {
+      background: rgba(255, 255, 255, 0.18);
+      border-radius: 999px;
+      padding: 0 10px;
+      font-weight: 600;
+      font-size: 0.78rem;
+      line-height: 1.6;
+    }
+    .announce time { opacity: 0.85; font-size: 0.78rem; }
+    .site-header {
+      background: rgba(253, 250, 246, 0.94);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--line);
+      padding: 10px 0;
+    }
+    .header-inner {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 700;
+      font-size: 1.15rem;
+      color: var(--ink);
+      letter-spacing: 0.02em;
+    }
+    .brand svg { flex: 0 0 auto; }
+    .brand:hover { text-decoration: none; }
+    .nav-main {
+      display: flex;
+      gap: 4px;
+      flex-wrap: wrap;
+      margin-left: auto;
+    }
+    .nav-main a {
+      padding: 6px 12px;
+      border-radius: 999px;
+      font-size: 0.92rem;
+      color: var(--ink-mid);
+      transition: background 0.15s, color 0.15s;
+    }
+    .nav-main a:hover,
+    .nav-main a:focus-visible {
+      background: var(--brand-soft);
+      color: var(--brand-deep);
+      text-decoration: none;
+    }
+    .header-tools {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-left: 4px;
+    }
+    .search-box {
+      display: flex;
+      align-items: center;
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 2px 4px 2px 12px;
+      transition: border-color 0.15s;
+    }
+    .search-box:focus-within { border-color: var(--brand); }
+    .search-box input {
+      border: 0;
+      background: transparent;
+      font: inherit;
+      font-size: 0.88rem;
+      padding: 6px 4px;
+      width: 130px;
+      color: var(--ink);
+      outline: none;
+    }
+    .search-box button {
+      border: 0;
+      background: var(--brand-soft);
+      color: var(--brand-deep);
+      border-radius: 999px;
+      padding: 5px 12px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      transition: background 0.15s;
+    }
+    .search-box button:hover { background: var(--brand); color: #fff; }
+    .search-feedback {
+      font-size: 0.78rem;
+      color: var(--danger);
+      width: 100%;
+      padding: 2px 0 0 6px;
+      min-height: 1.2em;
+    }
+    .mobile-menu-btn {
+      display: none;
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      padding: 8px 12px;
+      font-size: 0.9rem;
+      color: var(--ink-mid);
+    }
+    /* ---------- 首屏 ---------- */
+    .hero {
+      padding: 40px 0 48px;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero-inner {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 40px;
+      align-items: center;
+    }
+    .hero-kicker {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--brand-soft);
+      color: var(--brand-deep);
+      font-size: 0.8rem;
+      font-weight: 600;
+      padding: 4px 12px;
+      border-radius: 999px;
+      margin-bottom: 16px;
+      letter-spacing: 0.04em;
+    }
+    .hero h1 {
+      font-size: clamp(2rem, 5vw, 2.9rem);
+      line-height: 1.25;
+      letter-spacing: -0.01em;
+      color: var(--ink);
+      margin-bottom: 16px;
+    }
+    .hero p {
+      font-size: 1.02rem;
+      color: var(--ink-mid);
+      max-width: 36em;
+      margin-bottom: 24px;
+    }
+    .hero-actions {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 10px 22px;
+      border-radius: 999px;
+      font-size: 0.92rem;
+      font-weight: 600;
+      border: 1px solid transparent;
+      transition: transform 0.15s, background 0.15s, box-shadow 0.15s;
+    }
+    .btn-primary {
+      background: var(--brand);
+      color: #fff;
+      box-shadow: 0 4px 12px rgba(201, 143, 91, 0.28);
+    }
+    .btn-primary:hover {
+      background: var(--brand-deep);
+      text-decoration: none;
+      transform: translateY(-2px);
+    }
+    .btn-ghost {
+      background: var(--card);
+      border-color: var(--line);
+      color: var(--ink-mid);
+    }
+    .btn-ghost:hover {
+      border-color: var(--brand);
+      color: var(--brand-deep);
+      text-decoration: none;
+      transform: translateY(-2px);
+    }
+    .hero-meta {
+      display: flex;
+      gap: 24px;
+      margin-top: 28px;
+      flex-wrap: wrap;
+    }
+    .hero-meta div {
+      font-size: 0.82rem;
+      color: var(--ink-light);
+    }
+    .hero-meta strong {
+      display: block;
+      font-size: 1.35rem;
+      color: var(--ink);
+      line-height: 1.3;
+      font-weight: 700;
+    }
+    .hero-art {
+      position: relative;
+      min-height: 260px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .hero-art svg {
+      width: 100%;
+      height: auto;
+      max-width: 380px;
+    }
+    /* ---------- 主布局 ---------- */
+    .layout {
+      display: grid;
+      grid-template-columns: 1fr 300px;
+      gap: 36px;
+      padding: 12px 0 64px;
+      align-items: start;
+    }
+    main { min-width: 0; }
+    .sidebar {
+      position: sticky;
+      top: calc(var(--sticky-offset) + 8px);
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .side-card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 20px;
+      box-shadow: var(--shadow);
+    }
+    .side-card h3 {
+      font-size: 0.95rem;
+      margin-bottom: 12px;
+      color: var(--ink);
+      letter-spacing: 0.02em;
+    }
+    .side-links { display: flex; flex-direction: column; gap: 2px; }
+    .side-links a {
+      padding: 6px 10px;
+      border-radius: var(--radius-sm);
+      font-size: 0.9rem;
+      color: var(--ink-mid);
+      transition: background 0.15s, color 0.15s;
+    }
+    .side-links a:hover,
+    .side-links a.active {
+      background: var(--brand-soft);
+      color: var(--brand-deep);
+      text-decoration: none;
+    }
+    /* ---------- 板块通用 ---------- */
+    section[id] { scroll-margin-top: var(--sticky-offset); }
+    .block {
+      margin-bottom: 44px;
+    }
+    .block-head {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 18px;
+      flex-wrap: wrap;
+    }
+    .block-head h2 {
+      font-size: 1.4rem;
+      letter-spacing: -0.01em;
+      color: var(--ink);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .block-head h2::before {
+      content: "";
+      width: 6px;
+      height: 22px;
+      background: var(--brand);
+      border-radius: 3px;
+      display: inline-block;
+    }
+    .block-head .note {
+      font-size: 0.8rem;
+      color: var(--ink-light);
+    }
+    /* ---------- 卡片网格 ---------- */
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      transition: transform 0.2s, box-shadow 0.2s;
+      display: flex;
+      flex-direction: column;
+    }
+    .card:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-hover);
+    }
+    .card-body { padding: 16px; flex: 1; display: flex; flex-direction: column; }
+    .card-tag {
+      display: inline-block;
+      background: var(--brand-soft);
+      color: var(--brand-deep);
+      font-size: 0.72rem;
+      font-weight: 600;
+      padding: 2px 8px;
+      border-radius: 999px;
+      margin-bottom: 8px;
+      align-self: flex-start;
+    }
+    .card h3 {
+      font-size: 1rem;
+      line-height: 1.5;
+      margin-bottom: 8px;
+      color: var(--ink);
+    }
+    .card p {
+      font-size: 0.86rem;
+      color: var(--ink-mid);
+      margin-bottom: 12px;
+      flex: 1;
+    }
+    .card .meta {
+      font-size: 0.75rem;
+      color: var(--ink-light);
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    /* ---------- 紧凑列表 ---------- */
+    .list-tight { display: flex; flex-direction: column; }
+    .list-tight li {
+      display: grid;
+      grid-template-columns: 56px 1fr auto;
+      gap: 12px;
+      align-items: baseline;
+      padding: 12px 0;
+      border-bottom: 1px dashed var(--line-soft);
+    }
+    .list-tight li:last-child { border-bottom: 0; }
+    .list-tight .date {
+      font-size: 0.78rem;
+      color: var(--ink-light);
+      font-variant-numeric: tabular-nums;
+    }
+    .list-tight .title {
+      font-size: 0.94rem;
+      color: var(--ink-mid);
+    }
+    .list-tight .title a { color: var(--ink-mid); }
+    .list-tight .title a:hover { color: var(--brand-deep); }
+    .list-tight .tag {
+      font-size: 0.72rem;
+      color: var(--brand-deep);
+      background: var(--brand-soft);
+      padding: 1px 8px;
+      border-radius: 999px;
+      white-space: nowrap;
+    }
+    /* ---------- 分类入口标签索引 ---------- */
+    .tag-index {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .tag-index a {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 8px 16px;
+      font-size: 0.88rem;
+      color: var(--ink-mid);
+      transition: all 0.15s;
+    }
+    .tag-index a:hover {
+      background: var(--brand-soft);
+      border-color: var(--brand);
+      color: var(--brand-deep);
+      text-decoration: none;
+    }
+    .tag-index .count {
+      font-size: 0.72rem;
+      color: var(--ink-light);
+      margin-left: 4px;
+    }
+    /* ---------- 深度解析 ---------- */
+    .analysis {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: var(--radius-lg);
+      padding: 28px;
+      box-shadow: var(--shadow);
+    }
+    .analysis h3 {
+      font-size: 1.1rem;
+      margin: 22px 0 10px;
+      color: var(--ink);
+      padding-left: 12px;
+      border-left: 3px solid var(--brand);
+    }
+    .analysis h3:first-child { margin-top: 0; }
+    .analysis p {
+      font-size: 0.94rem;
+      color: var(--ink-mid);
+      margin-bottom: 10px;
+    }
+    .analysis .pull {
+      background: var(--brand-soft);
+      border-radius: var(--radius-sm);
+      padding: 14px 18px;
+      font-size: 0.9rem;
+      color: var(--brand-deep);
+      font-weight: 500;
+      margin: 14px 0;
+      border-left: 4px solid var(--brand);
+    }
+    .analysis ul { margin: 6px 0 12px 20px; list-style: disc; }
+    .analysis ul li { font-size: 0.9rem; color: var(--ink-mid); margin-bottom: 4px; }
+    /* ---------- 对照面板 ---------- */
+    .compare {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+    .compare-panel {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 18px;
+    }
+    .compare-panel h3 {
+      font-size: 0.95rem;
+      margin-bottom: 10px;
+      color: var(--brand-deep);
+    }
+    .compare-panel ul { display: flex; flex-direction: column; gap: 8px; }
+    .compare-panel li {
+      font-size: 0.86rem;
+      color: var(--ink-mid);
+      padding-left: 18px;
+      position: relative;
+    }
+    .compare-panel li::before {
+      content: "•";
+      position: absolute;
+      left: 4px;
+      color: var(--brand);
+    }
+    /* ---------- 步骤 ---------- */
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 14px;
+      counter-reset: step;
+    }
+    .step {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 18px 16px;
+      position: relative;
+    }
+    .step::before {
+      counter-increment: step;
+      content: counter(step);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 28px;
+      height: 28px;
+      background: var(--brand-soft);
+      color: var(--brand-deep);
+      font-weight: 700;
+      font-size: 0.82rem;
+      border-radius: 50%;
+      margin-bottom: 10px;
+    }
+    .step h3 { font-size: 0.9rem; margin-bottom: 6px; }
+    .step p { font-size: 0.82rem; color: var(--ink-mid); }
+    /* ---------- FAQ ---------- */
+    .faq-list { display: flex; flex-direction: column; gap: 10px; }
+    details {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: var(--radius-sm);
+      padding: 0 16px;
+      transition: background 0.15s;
+    }
+    details[open] { background: #fffdf9; border-color: var(--brand-soft); }
+    summary {
+      padding: 14px 0;
+      font-weight: 600;
+      font-size: 0.92rem;
+      color: var(--ink);
+      cursor: pointer;
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 10px;
+    }
+    summary::-webkit-details-marker { display: none; }
+    summary::after {
+      content: "+";
+      font-size: 1.2rem;
+      color: var(--brand);
+      transition: transform 0.2s;
+      flex-shrink: 0;
+    }
+    details[open] summary::after { transform: rotate(45deg); }
+    details .faq-body {
+      padding: 0 0 16px;
+      font-size: 0.88rem;
+      color: var(--ink-mid);
+    }
+    /* ---------- 评论 ---------- */
+    .comments { display: flex; flex-direction: column; gap: 14px; }
+    .comment {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 16px 18px;
+    }
+    .comment-head {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 6px;
+      flex-wrap: wrap;
+    }
+    .avatar {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: var(--brand-soft);
+      color: var(--brand-deep);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.8rem;
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+    .comment-name { font-size: 0.86rem; font-weight: 600; }
+    .comment-date { font-size: 0.72rem; color: var(--ink-light); }
+    .comment p { font-size: 0.88rem; color: var(--ink-mid); }
+    .comment .ref { color: var(--brand-deep); font-weight: 500; }
+    /* ---------- 引语卡 ---------- */
+    .quote-card {
+      background: linear-gradient(135deg, #fdf6ee 0%, #f9ece0 100%);
+      border: 1px solid var(--line);
+      border-radius: var(--radius-lg);
+      padding: 26px 28px;
+      position: relative;
+    }
+    .quote-card::before {
+      content: "“";
+      font-size: 4rem;
+      line-height: 1;
+      color: var(--brand);
+      opacity: 0.25;
+      position: absolute;
+      top: 4px;
+      left: 16px;
+      font-family: Georgia, serif;
+    }
+    .quote-card blockquote {
+      font-size: 0.98rem;
+      color: var(--ink-mid);
+      position: relative;
+      z-index: 1;
+      margin-bottom: 10px;
+    }
+    .quote-card cite {
+      font-size: 0.8rem;
+      color: var(--ink-light);
+      font-style: normal;
+    }
+    /* ---------- 相关推荐标签 ---------- */
+    .related-tags { display: flex; flex-wrap: wrap; gap: 8px; }
+    .related-tags a {
+      font-size: 0.82rem;
+      color: var(--ink-mid);
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 5px 14px;
+      transition: all 0.15s;
+    }
+    .related-tags a:hover {
+      background: var(--brand-soft);
+      border-color: var(--brand);
+      color: var(--brand-deep);
+      text-decoration: none;
+    }
+    /* ---------- 页脚 ---------- */
+    .site-footer {
+      background: #2d241c;
+      color: #d9cfc4;
+      padding: 44px 0 24px;
+      margin-top: 20px;
+      font-size: 0.86rem;
+    }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr 1fr;
+      gap: 32px;
+      margin-bottom: 32px;
+    }
+    .footer-brand {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-weight: 700;
+      font-size: 1.05rem;
+      color: #fff;
+      margin-bottom: 10px;
+    }
+    .footer-brand svg { flex-shrink: 0; }
+    .footer-col h4 {
+      color: #fff;
+      font-size: 0.88rem;
+      margin-bottom: 10px;
+      font-weight: 600;
+    }
+    .footer-col a {
+      display: block;
+      color: #b8aa9b;
+      font-size: 0.82rem;
+      padding: 3px 0;
+    }
+    .footer-col a:hover { color: #fff; text-decoration: underline; }
+    .footer-bottom {
+      border-top: 1px solid rgba(255, 255, 255, 0.12);
+      padding-top: 18px;
+      display: flex;
+      justify-content: space-between;
+      gap: 14px;
+      flex-wrap: wrap;
+      font-size: 0.76rem;
+      color: #9c8e7f;
+    }
+    /* ---------- 回到顶部 ---------- */
+    .to-top {
+      position: fixed;
+      right: 20px;
+      bottom: 20px;
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      background: var(--brand);
+      color: #fff;
+      border: 0;
+      box-shadow: 0 6px 16px rgba(143, 95, 54, 0.3);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+      z-index: 90;
+      transition: background 0.15s, transform 0.15s;
+    }
+    .to-top.show { display: flex; }
+    .to-top:hover { background: var(--brand-deep); transform: translateY(-2px); }
+    /* ---------- 响应式 ---------- */
+    @media (max-width: 1024px) {
+      .layout { grid-template-columns: 1fr; }
+      .sidebar { position: static; margin-top: 8px; }
+      .hero-inner { grid-template-columns: 1fr; gap: 24px; }
+      .hero-art { order: -1; min-height: 180px; }
+      .hero-art svg { max-width: 250px; }
+      .grid-3 { grid-template-columns: repeat(2, 1fr); }
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+      .steps { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 720px) {
+      .nav-main {
+        display: none;
+        width: 100%;
+        order: 5;
+        margin-left: 0;
+        flex-direction: column;
+        gap: 2px;
+        padding-top: 8px;
+      }
+      .nav-main.open { display: flex; }
+      .mobile-menu-btn { display: inline-block; margin-left: auto; }
+      .header-tools { width: 100%; order: 4; margin: 6px 0 0; }
+      .search-box { flex: 1; }
+      .search-box input { width: 100%; }
+      .grid-3 { grid-template-columns: 1fr; }
+      .compare { grid-template-columns: 1fr; }
+      .steps { grid-template-columns: 1fr; }
+      .list-tight li { grid-template-columns: 48px 1fr; }
+      .list-tight .tag { display: none; }
+      .analysis { padding: 20px; }
+      .footer-grid { grid-template-columns: 1fr; gap: 20px; }
+      .to-top { right: 12px; bottom: 12px; width: 38px; height: 38px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      * { transition-duration: 0.01ms !important; animation-duration: 0.01ms !important; scroll-behavior: auto !important; }
+      .card:hover, .btn:hover { transform: none !important; }
+    }
+    :focus-visible { outline: 2px solid var(--brand); outline-offset: 2px; }
+  </style>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+  <!-- 吸顶区：公告条 + 页头 -->
+  <div class="sticky-stack">
+    <div class="announce">
+      <div class="wrap">
+        <span class="announce-tag">腋下涩图</span>
+        <span>11 月 7 日更新：新增「腋下视角插画精选·第 12 期」，收录 24 位画师作品</span>
+        <time datetime="2026-11-07">昨天</time>
+      </div>
+    </div>
+    <header class="site-header">
+      <div class="wrap header-inner">
+        <a class="brand" href="/#hero" aria-label="腋下涩图首页">
+          <svg width="28" height="28" viewBox="0 0 100 100" aria-hidden="true" focusable="false">
+            <circle cx="50" cy="50" r="44" fill="#f4e6d6"/>
+            <path d="M30 60 Q50 30 70 60" stroke="#c98f5b" stroke-width="8" fill="none" stroke-linecap="round"/>
+            <circle cx="50" cy="42" r="6" fill="#c98f5b"/>
+          </svg>
+          腋下涩图
+        </a>
+        <button class="mobile-menu-btn" id="menuBtn" aria-expanded="false" aria-controls="mainNav">菜单</button>
+        <nav class="nav-main" id="mainNav" aria-label="主题导航">
+          <a href="/#overview">领域概览</a>
+          <a href="/#featured">精选推荐</a>
+          <a href="/#latest">最新更新</a>
+          <a href="/#categories">分类入口</a>
+          <a href="/#analysis">深度解析</a>
+          <a href="/#guide">体验指南</a>
+          <a href="/#faq">常见问题</a>
+        </nav>
+        <div class="header-tools">
+          <div class="search-box" role="search">
+            <input type="search" id="searchInput" placeholder="搜索画师或关键词" aria-label="站内搜索">
+            <button type="button" id="searchBtn">查找</button>
+          </div>
+          <div class="search-feedback" id="searchFeedback" role="status" aria-live="polite"></div>
+        </div>
+      </div>
+    </header>
+  </div>
+
+  <!-- 首屏 -->
+  <section class="hero" id="hero">
+    <div class="wrap hero-inner">
+      <div>
+        <span class="hero-kicker">插画视角专题 · 2026 秋季</span>
+        <h1>腋下涩图</h1>
+        <p>从构图张力到光影处理，聚焦插画中腋下视角的视觉表达。这里汇集画师作品索引、技法拆解与收藏渠道动态，为零散爱好者提供可检索的观察框架。</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="/#featured">浏览精选作品</a>
+          <a class="btn btn-ghost" href="/#guide">了解收藏路径</a>
+        </div>
+        <div class="hero-meta">
+          <div><strong>137</strong>位画师收录</div>
+          <div><strong>24</strong>期精选专题</div>
+          <div><strong>6</strong>个活跃社区</div>
+        </div>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <svg viewBox="0 0 400 340" xmlns="http://www.w3.org/2000/svg" role="img">
+          <defs>
+            <linearGradient id="bgGrad" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#f4e6d6"/>
+              <stop offset="1" stop-color="#fdfaf6"/>
+            </linearGradient>
+            <linearGradient id="armGrad" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#e8c9a8"/>
+              <stop offset="1" stop-color="#d4a87a"/>
+            </linearGradient>
+          </defs>
+          <rect width="400" height="340" rx="24" fill="url(#bgGrad)"/>
+          <ellipse cx="200" cy="280" rx="120" ry="18" fill="#e8ddd0" opacity="0.6"/>
+          <path d="M120 120 Q160 60 220 90 Q270 115 280 180 Q290 240 250 270 Q220 290 190 270 Q160 250 150 200 Q140 160 120 120Z" fill="url(#armGrad)" opacity="0.85"/>
+          <path d="M150 140 Q180 110 215 130 Q245 148 250 190" stroke="#b98763" stroke-width="3" fill="none" opacity="0.5"/>
+          <path d="M165 200 Q190 180 220 200" stroke="#b98763" stroke-width="2.5" fill="none" opacity="0.4"/>
+          <circle cx="195" cy="155" r="4" fill="#8f5f36" opacity="0.5"/>
+          <circle cx="215" cy="170" r="3" fill="#8f5f36" opacity="0.4"/>
+          <path d="M290 120 Q310 100 330 120 Q345 135 335 155" stroke="#c98f5b" stroke-width="2" fill="none" opacity="0.6" stroke-linecap="round"/>
+          <path d="M80 180 Q60 200 80 220" stroke="#c98f5b" stroke-width="2" fill="none" opacity="0.5" stroke-linecap="round"/>
+          <circle cx="100" cy="90" r="6" fill="#e8c9a8" opacity="0.7"/>
+          <circle cx="320" cy="230" r="8" fill="#e8c9a8" opacity="0.6"/>
+          <circle cx="280" cy="70" r="4" fill="#c98f5b" opacity="0.45"/>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- 主布局：内容 + 侧栏 -->
+  <div class="wrap layout">
+    <main>
+
+      <!-- 1. 领域概览 -->
+      <section class="block" id="overview">
+        <div class="block-head">
+          <h2>领域概览</h2>
+          <span class="note">基于 2026 年 10 月收录数据</span>
+        </div>
+        <div class="grid-3">
+          <article class="card">
+            <div class="card-body">
+              <span class="card-tag">视角定义</span>
+              <h3>腋下构图在插画中的位置</h3>
+              <p>腋下视角通常指手臂抬起或侧身时，由躯干与上臂形成的三角区域。Pixiv 标签「脇見せ」在 2026 年 10 月收录超 8.2 万件作品，以日系插画师为主。</p>
+              <div class="meta"><span>10 月 28 日</span><span>Pixiv 标签页</span></div>
+            </div>
+          </article>
+          <article class="card">
+            <div class="card-body">
+              <span class="card-tag">画师分布</span>
+              <h3>活跃画师与投稿节奏</h3>
+              <p>收录的 137 位画师中，约 41% 保持每周至少一张更新。X（Twitter）上「#腋下見せ」话题在 11 月 3 日至 6 日新增 620 条带图帖。多数画师在周五、周六晚间发布。</p>
+              <div class="meta"><span>11 月 6 日</span><span>X 话题标签</span></div>
+            </div>
+          </article>
+          <article class="card">
+            <div class="card-body">
+              <span class="card-tag">平台生态</span>
+              <h3>收藏与分享的主要渠道</h3>
+              <p>除 Pixiv 与 X 外，Misskey 部分实例的画师以「#脇絵」标签归档作品。Discord 的「腋下构图研讨」服务器在 2026 年 10 月满员 500 人，转为邀请制。</p>
+              <div class="meta"><span>10 月 30 日</span><span>Discord 服务器公告</span></div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- 2. 精选内容推荐 -->
+      <section class="block" id="featured">
+        <div class="block-head">
+          <h2>精选内容推荐</h2>
+          <span class="note">编辑筛选 · 每周三更新</span>
+        </div>
+        <div class="grid-3">
+          <article class="card">
+            <div class="card-body">
+              <span class="card-tag">精选画师</span>
+              <h3>ナツキ的侧光处理</h3>
+              <p>2026 年 10 月 30 日发布的《午后》系列第三张，用暖橙色侧光勾勒手臂轮廓，阴影边缘保留 2px 软过渡。Pixiv 收藏数在 72 小时内破 1.2 万。</p>
+              <div class="meta"><span>Pixiv · ナツキ</span><span>11 月 1 日</span></div>
+            </div>
+          </article>
+          <article class="card">
+            <div class="card-body">
+              <span class="card-tag">专题合集</span>
+              <h3>第 12 期精选：秋季服装与露腋</h3>
+              <p>收录 24 位画师作品，其中 17 张采用针织衫滑落肩头的穿法。与第 11 期夏季泳装专题相比，手臂遮挡率从 12% 升至 38%，构图更依赖衣料褶皱。</p>
+              <div class="meta"><span>专题归档</span><span>11 月 7 日</span></div>
+            </div>
+          </article>
+          <article class="card">
+            <div class="card-body">
+              <span class="card-tag">技法拆解</span>
+              <h3>锁骨到腋下的线条衔接</h3>
+              <p>画师「しろ」在 10 月 26 日的直播中展示从锁骨到腋窝的 S 形曲线画法，全程 47 分钟，使用 Clip Studio Paint 的「浓淡钢笔」。回放保存在 YouTube 频道。</p>
+              <div class="meta"><span>YouTube · しろ</span><span>10 月 28 日</span></div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- 3. 最新更新 -->
+      <section class="block" id="latest">
+        <div class="block-head">
+          <h2>最新更新</h2>
+          <span class="note">按发布时间倒序</span>
+        </div>
+        <ul class="list-tight">
+          <li>
+            <span class="date">11 月 7 日</span>
+            <span class="title"><a href="/#featured">专题第 12 期上线，收录 24 张秋季服装腋下构图</a></span>
+            <span class="tag">专题</span>
+          </li>
+          <li>
+            <span class="date">11 月 6 日</span>
+            <span class="title"><a href="/#overview">Pixiv「脇見せ」标签周增 3400 件，创 10 月以来单周新高</a></span>
+            <span class="tag">数据</span>
+          </li>
+          <li>
+            <span class="date">11 月 5 日</span>
+            <span class="title"><a href="/#guide">画师「よる」发布腋下光影教程 PDF，32 页，售价 500 日元</a></span>
+            <span class="tag">教程</span>
+          </li>
+          <li>
+            <span class="date">11 月 4 日</span>
+            <span class="title"><a href="/#comments">Discord 研讨服务器恢复邀请制，新增 80 个名额</a></span>
+            <span class="tag">社区</span>
+          </li>
+          <li>
+            <span class="date">11 月 2 日</span>
+            <span class="title"><a href="/#analysis">X 话题「#腋下見せ」单日帖量 620 条，周五晚间为高峰</a></span>
+            <span class="tag">数据</span>
+          </li>
+        </ul>
+      </section>
+
+      <!-- 4. 分类入口 -->
+      <section class="block" id="categories">
+        <div class="block-head">
+          <h2>分类入口</h2>
+          <span class="note">按常见检索词组织</span>
+        </div>
+        <div class="tag-index">
+          <a href="/#featured">腋下构图插画 <span class="count">2.4k</span></a>
+          <a href="/#featured">抬手姿势参考 <span class="count">1.1k</span></a>
+          <a href="/#analysis">腋下阴影绘制 <span class="count">860</span></a>
+          <a href="/#featured">针织衫滑落肩 <span class="count">720</span></a>
+          <a href="/#guide">画师直播回放 <span class="count">530</span></a>
+          <a href="/#overview">Pixiv 标签整理 <span class="count">480</span></a>
+          <a href="/#analysis">锁骨线条衔接 <span class="count">410</span></a>
+          <a href="/#comments">腋下视角讨论 <span class="count">360</span></a>
+          <a href="/#guide">Clip Studio 笔刷 <span class="count">290</span></a>
+          <a href="/#featured">秋季服装合集 <span class="count">240</span></a>
+          <a href="/#analysis">光影边缘过渡 <span class="count">180</span></a>
+          <a href="/#faq">收藏渠道选择 <span class="count">150</span></a>
+        </div>
+      </section>
+
+      <!-- 5. 深度解析（唯一主体阅读区） -->
+      <section class="block" id="analysis">
+        <div class="block-head">
+          <h2>深度解析</h2>
+          <span class="note">全页唯一主体阅读区</span>
+        </div>
+        <div class="analysis">
+          <h3>腋下视角的热度集中在周五夜间，而非周末</h3>
+          <p>根据 X 平台 2026 年 10 月 9 日至 11 月 6 日的数据，带「#腋下見せ」标签的帖子在周五 20:00–23:00 的平均发帖量为 187 条/小时，周六同时段为 142 条/小时，周日进一步降至 98 条/小时。这与多数画师在周五收工后集中完成一周积压草稿的习惯吻合。画师「よる」在 10 月 31 日的直播中提到，周五晚是她唯一能连续画三小时的时段。这一判断可以被反驳：平台算法在周五晚对插画类内容的推荐权重是否有变化，目前没有公开数据支持。但仅从发帖量看，周五夜间的集中度已经连续 4 周高于周末。</p>
+          <div class="pull">可核对结构：周一至周四日均发帖 76 条；周五 187 条；周六 142 条；周日 98 条。数据来源为 X 搜索「#腋下見せ」按日统计，采集时间 2026 年 11 月 7 日 10:00。</div>
+
+          <h3>「腋下涩图」与「泳装腋下」的标签重叠度只有 18%</h3>
+          <p>Pixiv 上「脇見せ」标签作品与「水着」标签作品的交集，在 2026 年 10 月抽样 500 件中仅有 90 件同时出现，重叠率 18%。这意味着腋下视角的创作主力并不依赖泳装场景。相反，「私服」与「脇見せ」的重叠率达到 54%，「制服」为 22%。画师「しろ」在 10 月 26 日直播中解释，私服能提供更多衣料褶皱和阴影层次，比泳装的平滑肌肤更容易做出体积感。这组数据可以解释为什么秋季专题的浏览完成率比夏季专题高 11 个百分点——衣物细节提供了更多停留理由。</p>
+
+          <h3>光影教程的实际完播率低于画师预期</h3>
+          <p>画师「よる」在 11 月 5 日发布的 32 页 PDF 教程，首日下载量 1,840 次。但根据她 11 月 6 日在 X 上的说法，教程附带的 12 分钟旁白视频，在 YouTube 上的平均观看时长为 4 分 12 秒，完播率约 35%。对比她 2026 年 9 月发布的「手的画法」视频完播率 61%，差距明显。一个可能的原因是腋下光影的参考图例较少，读者需要反复暂停比对，而教程没有设置分段标记。她在评论区补充，下一版会加入时间戳章节。这个说法是画师本人的回应，尚未有第三方复现验证。</p>
+
+          <h3>社区讨论的争议点：露腋是否应被视为独立题材</h3>
+          <p>在 Discord「腋下构图研讨」服务器 10 月 30 日的讨论中，成员「kiri」认为腋下视角只是人体动态的子类，不应单独设标签。成员「はる」则引用 Pixiv 标签使用量——「脇見せ」在 2026 年 10 月有 8.2 万件作品，超过「鎖骨」的 6.1 万件——主张它有独立的检索需求。这场讨论没有形成共识，服务器公告最终保留了现有标签体系。以上为转述，双方原话可在该服务器 #tag-discuss 频道 10 月 30 日 21:14 起查阅。</p>
+        </div>
+      </section>
+
+      <!-- 6. 体验指南 -->
+      <section class="block" id="guide">
+        <div class="block-head">
+          <h2>体验指南</h2>
+          <span class="note">从检索到收藏的四步路径</span>
+        </div>
+        <div class="steps">
+          <div class="step">
+            <h3>定位标签</h3>
+            <p>在 Pixiv 搜索「脇見せ」，按「最新」排序。X 端用「#腋下見せ」并筛选「媒体」标签，可过滤文字讨论。</p>
+          </div>
+          <div class="step">
+            <h3>筛选画师</h3>
+            <p>查看画师近 30 天投稿频率。每周更新 2 张以上的画师，构图稳定性通常更高。收录的 137 位画师中，41% 达到此标准。</p>
+          </div>
+          <div class="step">
+            <h3>比对技法</h3>
+            <p>用「しろ」的 S 形曲线法和「ナツキ」的侧光边缘法对照同一参考图，观察线条衔接与阴影过渡的差异。</p>
+          </div>
+          <div class="step">
+            <h3>归档与反馈</h3>
+            <p>在浏览器书签按「画师名_日期_标签」命名。发现新画师时，优先查看其 2026 年 10 月后的作品，早期风格差异较大。</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 7. 对照面板 -->
+      <section class="block" id="compare">
+        <div class="block-head">
+          <h2>技法对照</h2>
+          <span class="note">两种常见腋下光影处理方式</span>
+        </div>
+        <div class="compare">
+          <div class="compare-panel">
+            <h3>侧光硬边缘</h3>
+            <ul>
+              <li>画师代表：ナツキ</li>
+              <li>阴影边缘宽度：1–2px</li>
+              <li>适用场景：午后强光、私服</li>
+              <li>代表作品：《午后》系列第三张，2026-10-30</li>
+              <li>工具：Clip Studio Paint 浓淡钢笔</li>
+              <li>争议点：近距离观看时边缘可能显得生硬</li>
+            </ul>
+          </div>
+          <div class="compare-panel">
+            <h3>柔光软过渡</h3>
+            <ul>
+              <li>画师代表：しろ</li>
+              <li>阴影边缘宽度：6–10px</li>
+              <li>适用场景：室内窗边、针织衫</li>
+              <li>代表作品：《窗边》2026-10-26 直播稿</li>
+              <li>工具：Clip Studio Paint 水彩笔刷</li>
+              <li>争议点：缩小后体积感减弱，需搭配高光线</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- 8. FAQ -->
+      <section class="block" id="faq">
+        <div class="block-head">
+          <h2>常见问题</h2>
+          <span class="note">FAQ</span>
+        </div>
+        <div class="faq-list">
+          <details>
+            <summary>腋下涩图在 Pixiv 上应该搜哪个标签？</summary>
+            <div class="faq-body">日文标签「脇見せ」是最主要的检索词，2026 年 10 月收录量 8.2 万件。辅助标签有「脇絵」「腋下」，后者多为中文画师使用，量级约 3000 件。搜索时建议同时勾选「オリジナル」过滤转载。</div>
+          </details>
+          <details>
+            <summary>为什么周五晚上的新图最多？</summary>
+            <div class="faq-body">画师多在周五收工后集中完成一周积压的草稿。X 平台「#腋下見せ」10 月 9 日至 11 月 6 日的发帖量统计显示，周五 20:00–23:00 平均 187 条/小时，周六 142 条，周日 98 条。画师「よる」在 10 月 31 日直播中确认了这一习惯。</div>
+          </details>
+          <details>
+            <summary>「脇見せ」和「水着」标签重叠多吗？</summary>
+            <div class="faq-body">不多。2026 年 10 月抽样 500 件「脇見せ」作品中，同时带「水着」标签的仅 90 件，重叠率 18%。「私服」重叠率 54%，「制服」22%。因此想找日常服装的腋下构图，用「私服」组合检索更有效。</div>
+          </details>
+          <details>
+            <summary>画师「しろ」的 S 形曲线法适合新手吗？</summary>
+            <div class="faq-body">适合有基础人体结构认知的练习者。她 10 月 26 日直播中展示的从锁骨到腋窝的曲线，依赖对肩部肌肉走向的理解。完全零基础者建议先练锁骨和肩胛骨的位置关系，再尝试这条曲线。回放时长 47 分钟，YouTube 频道「しろ」可查。</div>
+          </details>
+          <details>
+            <summary>Discord 研讨服务器怎么加入？</summary>
+            <div class="faq-body">「腋下构图研讨」服务器在 2026 年 10 月满员 500 人后转为邀请制。11 月 4 日恢复邀请，新增 80 个名额。加入需通过现有成员获取邀请链接，服务器公告写明不接受公开申请。</div>
+          </details>
+        </div>
+      </section>
+
+      <!-- 9. 用户评论 -->
+      <section class="block" id="comments">
+        <div class="block-head">
+          <h2>用户评论</h2>
+          <span class="note">来自 X 和 Discord 的公开讨论</span>
+        </div>
+        <div class="comments">
+          <div class="comment">
+            <div class="comment-head">
+              <span class="avatar">K</span>
+              <span class="comment-name">kiri</span>
+              <span class="comment-date">11 月 6 日</span>
+            </div>
+            <p>第 12 期专题里那张 <span class="ref">针织衫滑落肩的构图</span>，左臂抬起的角度画得有点僵，上臂和躯干的夹角接近 90 度，现实中这个角度腋窝会被拉伸得很平，但画里阴影还保留了很深的褶皱。对比同一期 <span class="ref">「よる」的窗边那张</span>，角度小一些反而更自然。</p>
+          </div>
+          <div class="comment">
+            <div class="comment-head">
+              <span class="avatar">H</span>
+              <span class="comment-name">はる</span>
+              <span class="comment-date">11 月 5 日</span>
+            </div>
+            <p>「脇見せ」标签比「鎖骨」多 2.1 万件，这说明检索需求是实打实存在的。不设独立分类反而是奇怪的事。不过我也同意 <span class="ref">kiri</span> 说的，部分作品的人体确实经不起细看。</p>
+          </div>
+          <div class="comment">
+            <div class="comment-head">
+              <span class="avatar">M</span>
+              <span class="comment-name">mochi</span>
+              <span class="comment-date">11 月 4 日</span>
+            </div>
+            <p>中性地说，<span class="ref">「よる」的 PDF 教程</span>内容挺细的，但 32 页收 500 日元，对比她之前免费发的「手的画法」，感觉定价偏高了。完播率 35% 可能也有这个原因——买完发现看不动。</p>
+          </div>
+          <div class="comment">
+            <div class="comment-head">
+              <span class="avatar">R</span>
+              <span class="comment-name">rin</span>
+              <span class="comment-date">11 月 3 日</span>
+            </div>
+            <p>周五晚上刷 X 确实能捡到不少好图。<span class="ref">10 月 30 日那个周五</span>我存了 15 张，周六只存了 6 张。不知道是算法还是画师真的都挤在周五发。</p>
+          </div>
+          <div class="comment">
+            <div class="comment-head">
+              <span class="avatar">T</span>
+              <span class="comment-name">taku</span>
+              <span class="comment-date">11 月 2 日</span>
+            </div>
+            <p>吐槽一下，有些标「脇見せ」的图根本就是普通抬手，腋下只露了一条缝。标签滥用挺严重的。<span class="ref">ナツキ的《午后》第三张</span>是少数让我觉得视角选择有理由的。</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 10. 相关资讯（带图） -->
+      <section class="block" id="news">
+        <div class="block-head">
+          <h2>相关资讯</h2>
+          <span class="note">外部动态摘要</span>
+        </div>
+        <div class="grid-3">
+          <article class="card">
+            <img src="https://picsum.photos/seed/腋下画师/400/200" width="400" height="200" loading="lazy" alt="画师直播工作台与数位屏" style="object-fit:cover; width:100%; height:150px;">
+            <div class="card-body">
+              <span class="card-tag">直播</span>
+              <h3>「よる」11 月 12 日将直播修订版教程</h3>
+              <p>她在 11 月 6 日的 X 帖中表示，新版会加入时间戳章节，并回应完播率 35% 的反馈。直播定于 11 月 12 日 21:00（JST）。</p>
+              <div class="meta"><span>X · よる</span><span>11 月 6 日</span></div>
+            </div>
+          </article>
+          <article class="card">
+            <img src="https://picsum.photos/seed/腋下标签/400/200" width="400" height="200" loading="lazy" alt="Pixiv 标签搜索界面截图示意" style="object-fit:cover; width:100%; height:150px;">
+            <div class="card-body">
+              <span class="card-tag">平台</span>
+              <h3>Pixiv 将「脇見せ」纳入秋季推荐标签</h3>
+              <p>10 月 29 日起，该标签出现在 Pixiv 首页的「季节推荐」模块，为期两周。画师投稿量在推荐首日增长 23%，11 月 1 日后回落至日常水平。</p>
+              <div class="meta"><span>Pixiv 公告</span><span>10 月 29 日</span></div>
+            </div>
+          </article>
+          <article class="card">
+            <img src="https://picsum.photos/seed/腋下社区/400/200" width="400" height="200" loading="lazy" alt="Discord 服务器频道列表截图示意" style="object-fit:cover; width:100%; height:150px;">
+            <div class="card-body">
+              <span class="card-tag">社区</span>
+              <h3>Discord 服务器新增「技法互评」频道</h3>
+              <p>11 月 4 日恢复邀请的同时，服务器开设 #critique 频道，要求每条互评至少指出一个具体线条或阴影问题。首日收到 47 条带图帖。</p>
+              <div class="meta"><span>Discord 公告</span><span>11 月 4 日</span></div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- 11. 相关推荐标签 -->
+      <section class="block" id="related">
+        <div class="block-head">
+          <h2>相关推荐</h2>
+        </div>
+        <div class="related-tags">
+          <a href="/#featured">腋下构图插画</a>
+          <a href="/#analysis">腋下阴影绘制</a>
+          <a href="/#guide">画师直播回放</a>
+          <a href="/#featured">抬手姿势参考</a>
+          <a href="/#analysis">锁骨线条衔接</a>
+          <a href="/#categories">Pixiv 标签整理</a>
+          <a href="/#compare">侧光硬边缘 vs 柔光</a>
+          <a href="/#news">秋季推荐标签</a>
+          <a href="/#comments">标签滥用讨论</a>
+          <a href="/#faq">收藏渠道选择</a>
+        </div>
+      </section>
+
+      <!-- 12. 创作者证言（引语卡） -->
+      <section class="block" id="voices">
+        <div class="block-head">
+          <h2>创作者证言</h2>
+        </div>
+        <div class="quote-card">
+          <blockquote>画腋下最难的是让手臂看起来是抬起来的，而不是飘着的。我通常在腋窝最深处加一道短而深的阴影，长度不超过上臂宽度的三分之一。这个比例是我在 2026 年 9 月重画旧稿时对比出来的，过长的阴影会让肩膀显得脱臼。</blockquote>
+          <cite>—— 画师 しろ，2026 年 10 月 26 日直播原话</cite>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- 侧栏 -->
+    <aside class="sidebar" aria-label="侧边栏">
+      <div class="side-card">
+        <h3>栏内导航</h3>
+        <nav class="side-links" id="sideNav" aria-label="滚动导航">
+          <a href="/#overview">领域概览</a>
+          <a href="/#featured">精选推荐</a>
+          <a href="/#latest">最新更新</a>
+          <a href="/#categories">分类入口</a>
+          <a href="/#analysis">深度解析</a>
+          <a href="/#guide">体验指南</a>
+          <a href="/#compare">技法对照</a>
+          <a href="/#faq">常见问题</a>
+          <a href="/#comments">用户评论</a>
+          <a href="/#news">相关资讯</a>
+        </nav>
+      </div>
+      <div class="side-card">
+        <h3>本周检索词</h3>
+        <div class="related-tags" style="gap:6px;">
+          <a href="/#featured">腋下涩图</a>
+          <a href="/#analysis">脇見せ</a>
+          <a href="/#featured">针织衫滑落肩</a>
+          <a href="/#guide">手工书签归档</a>
+          <a href="/#faq">Pixiv 标签</a>
+        </div>
+      </div>
+    </aside>
+  </div>
+
+  <!-- 页脚 -->
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand">
+            <svg width="24" height="24" viewBox="0 0 100 100" aria-hidden="true">
+              <circle cx="50" cy="50" r="44" fill="#f4e6d6"/>
+              <path d="M30 60 Q50 30 70 60" stroke="#c98f5b" stroke-width="8" fill="none" stroke-linecap="round"/>
+              <circle cx="50" cy="42" r="6" fill="#c98f5b"/>
+            </svg>
+            腋下涩图
+          </div>
+          <p style="color:#b8aa9b; font-size:0.82rem; max-width:24em;">为腋下视角插画爱好者整理画师索引、技法拆解与社区动态，提供可检索的观察框架。</p>
+        </div>
+        <div class="footer-col">
+          <h4>内容频道</h4>
+          <a href="/#overview">领域概览</a>
+          <a href="/#featured">精选推荐</a>
+          <a href="/#latest">最新更新</a>
+          <a href="/#analysis">深度解析</a>
+        </div>
+        <div class="footer-col">
+          <h4>参与互动</h4>
+          <a href="/#guide">体验指南</a>
+          <a href="/#faq">常见问题</a>
+          <a href="/#comments">用户评论</a>
+          <a href="/#voices">创作者证言</a>
+        </div>
+        <div class="footer-col">
+          <h4>分类与索引</h4>
+          <a href="/#categories">分类入口</a>
+          <a href="/#related">相关推荐</a>
+          <a href="/#news">相关资讯</a>
+          <a href="/#compare">技法对照</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>示例数据说明：画师数量、标签统计、发帖量为 2026 年 10 月至 11 月 7 日的模拟采集数据，仅供结构演示。</span>
+        <span>© 2026 腋下涩图 · 内容整理与页面更新：2026-11-08</span>
+      </div>
+    </div>
+  </footer>
+
+  <button class="to-top" id="toTop" aria-label="回到顶部">↑</button>
+
+  <script>
+    (function () {
+      // 移动端菜单
+      var menuBtn = document.getElementById('menuBtn');
+      var mainNav = document.getElementById('mainNav');
+      if (menuBtn && mainNav) {
+        menuBtn.addEventListener('click', function () {
+          var isOpen = mainNav.classList.toggle('open');
+          menuBtn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+        });
+        // 点击导航项后收起
+        mainNav.addEventListener('click', function (e) {
+          if (e.target.tagName === 'A' && window.innerWidth <= 720) {
+            mainNav.classList.remove('open');
+            menuBtn.setAttribute('aria-expanded', 'false');
+          }
+        });
+      }
+
+      // 本地搜索
+      var searchInput = document.getElementById('searchInput');
+      var searchBtn = document.getElementById('searchBtn');
+      var feedback = document.getElementById('searchFeedback');
+      var searchable = Array.prototype.slice.call(document.querySelectorAll('h2, h3, .card-tag, .tag, .title a, .related-tags a, summary'));
+      function doSearch() {
+        var q = (searchInput.value || '').trim().toLowerCase();
+        if (!q) {
+          feedback.textContent = '';
+          return;
+        }
+        var found = false;
+        searchable.forEach(function (el) {
+          if (el.textContent.toLowerCase().indexOf(q) !== -1) found = true;
+        });
+        feedback.textContent = found ? '匹配到相关内容，请浏览页面中的高亮条目。' : '没有找到与「' + searchInput.value.trim() + '」相关的结果，换个词试试。';
+      }
+      if (searchBtn) searchBtn.addEventListener('click', doSearch);
+      if (searchInput) {
+        searchInput.addEventListener('keydown', function (e) {
+          if (e.key === 'Enter') { e.preventDefault(); doSearch(); }
+        });
+      }
+
+      // 侧栏滚动高亮
+      var sideLinks = Array.prototype.slice.call(document.querySelectorAll('#sideNav a'));
+      var sections = sideLinks.map(function (a) {
+        var id = a.getAttribute('href').replace('/#', '');
+        return document.getElementById(id);
+      });
+      function highlight() {
+        var pos = window.scrollY + 140;
+        var currentIndex = -1;
+        sections.forEach(function (sec, i) {
+          if (sec && sec.offsetTop <= pos) currentIndex = i;
+        });
+        sideLinks.forEach(function (a, i) {
+          a.classList.toggle('active', i === currentIndex);
+        });
+      }
+      window.addEventListener('scroll', highlight, { passive: true });
+      highlight();
+
+      // 回到顶部
+      var toTop = document.getElementById('toTop');
+      window.addEventListener('scroll', function () {
+        if (window.scrollY > 400) {
+          toTop.classList.add('show');
+        } else {
+          toTop.classList.remove('show');
+        }
+      }, { passive: true });
+      toTop.addEventListener('click', function () {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+
+      // 平滑滚动 + 吸顶偏移（原生 scroll-margin 已设置，这里兜底）
+      document.querySelectorAll('a[href^="/#"]').forEach(function (anchor) {
+        anchor.addEventListener('click', function (e) {
+          var id = this.getAttribute('href').replace('/#', '');
+          var target = document.getElementById(id);
+          if (target) {
+            e.preventDefault();
+            var top = target.getBoundingClientRect().top + window.scrollY - 112;
+            window.scrollTo({ top: top, behavior: 'smooth' });
+            history.replaceState(null, '', '/#' + id);
+          }
+        });
+      });
+    })();
+  </script>
+
+  <!-- WebSite 结构化数据 -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "腋下涩图",
+    "description": "聚焦二次元插画中腋下视角创作的交流园地，收录画师作品、解析构图与光影技法、整理收藏渠道与社区动态。",
+    "inLanguage": "zh-CN",
+    "dateModified": "2026-11-08"
+  }
+  </script>
+
+  <!-- FAQPage 结构化数据 -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "腋下涩图在 Pixiv 上应该搜哪个标签？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "日文标签「脇見せ」是最主要的检索词，2026 年 10 月收录量 8.2 万件。辅助标签有「脇絵」「腋下」，后者多为中文画师使用，量级约 3000 件。搜索时建议同时勾选「オリジナル」过滤转载。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "为什么周五晚上的新图最多？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "画师多在周五收工后集中完成一周积压的草稿。X 平台「#腋下見せ」10 月 9 日至 11 月 6 日的发帖量统计显示，周五 20:00–23:00 平均 187 条/小时，周六 142 条，周日 98 条。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "「脇見せ」和「水着」标签重叠多吗？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "不多。2026 年 10 月抽样 500 件「脇見せ」作品中，同时带「水着」标签的仅 90 件，重叠率 18%。「私服」重叠率 54%，「制服」22%。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "画师「しろ」的 S 形曲线法适合新手吗？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "适合有基础人体结构认知的练习者。她 10 月 26 日直播中展示的从锁骨到腋窝的曲线，依赖对肩部肌肉走向的理解。完全零基础者建议先练锁骨和肩胛骨的位置关系，再尝试这条曲线。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Discord 研讨服务器怎么加入？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "「腋下构图研讨」服务器在 2026 年 10 月满员 500 人后转为邀请制。11 月 4 日恢复邀请，新增 80 个名额。加入需通过现有成员获取邀请链接，服务器公告写明不接受公开申请。"
+        }
+      }
+    ]
+  }
+  </script>
+</body>
+                       </html>
